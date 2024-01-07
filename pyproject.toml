@@ -1,0 +1,4 @@
+[project]
+dependencies = [
+    "aws-lambda-powertools[all]",
+]
