@@ -4,3 +4,29 @@ dependencies = [
     "aws-lambda-powertools",
     "pydantic",
 ]
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+]
+test = [
+    "pytest",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # isort
+    "I",
+]
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "tab"
+docstring-code-format = true

@@ -3,10 +3,12 @@ pants_version = "2.20.0"
 
 backend_packages = [
   "pants.backend.python",
-  "pants.backend.python.lint.black",
   "pants.backend.awslambda.python",
+  "pants.backend.experimental.python.lint.ruff.check",
+  "pants.backend.experimental.python.lint.ruff.format",
 ]
 
 [python]
 enable_resolves=true
 interpreter_constraints = ["CPython==3.11.*"]
+
