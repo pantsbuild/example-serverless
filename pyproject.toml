@@ -1,4 +1,6 @@
 [project]
+name = "pants_example_serverless"
 dependencies = [
-    "aws-lambda-powertools[all]",
+    "aws-lambda-powertools",
+    "pydantic",
 ]
