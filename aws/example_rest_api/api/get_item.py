@@ -12,7 +12,7 @@ items: dict[int, Item] = {
 
 
 @app.get('/items/<item_id>')
-def get_user(item_id: str):
+def get_item(item_id: str):
 	item = items.get(int(item_id))
 
 	if item:

@@ -3,7 +3,7 @@ from aws_lambda_powertools.event_handler import ApiGatewayResolver, Response
 
 from aws.example_rest_api.models.item import Item
 
-app = ApiGatewayResolver()
+app = ApiGatewayResolver(enable_validation=True)
 logger = Logger()
 
 
@@ -27,7 +27,7 @@ def delete_item(item_id: str):
 
 @app.post('/items')
 def create_item(request_body: Item):
-	if items[request_body.item_id]:
+	if request_body.item_id in items:
 		logger.info('Item already exists, unable to create')
 		return Response(status_code=400)
 
