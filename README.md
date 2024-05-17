@@ -40,7 +40,7 @@ pants --changed-since=HEAD fix :: # Only run on changed files
 Run Tests
 ```
 pants test ::
-pants --changed-since=HEAD :: # Only run on changed files
+pants --changed-since=HEAD test :: # Only run on changed files
 ```
 
 Package AWS Lambda Zip files
